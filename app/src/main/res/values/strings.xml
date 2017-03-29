@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name" translatable="false">Franssen Properties, Inc.</string>
+
+    <string name="exploreBtn">Explore</string>
+    <string name="logInBtn">Log In</string>
+    <string name="locationBtn">Location</string>
+    <string name="threeCpBtnAply">Apply </string>
+    <string name="twoCpBtnAplly">Apply</string>
+    <string name="application_str" translatable="false">Application For Housing</string>
+    <string name="a_appli_str" translatable="false">A. Applicant: </string>
+    <string name="name_str">Name</string>
+    <string name="address_str" translatable="false">Address: </string>
+    <string name="city_str">City: </string>
+    <string name="state_str">State: </string>
+    <string name="zip_str">Zip: </string>
+    <string name="phone_str">Telephone: </string>
+    <string name="student_radio">Student: </string>
+    <string name="yes_radio">Yes</string>
+    <string name="no_radio">No</string>
+    <string name="relative_title_str">Name, Address, and Phone Number of Relatives or Friends</string>
+    <string name="rel_name_str">Name: </string>
+    <string name="rel_relation_str">Relationship</string>
+    <string name="title_activity_log_in">Sign in</string>
+
+    <string name="tenant_name_str">Tenant Name</string>
+    <string name="tips_str">This are going to be the long test about the tips in the apt</string>
+    <string name="news_str">This are going to be the news that we send evy month</string>
+    <string name="service_request_str">Create Service Request</string>
+    <string name="emergency_str">Emergency</string>
+    <string name="call911_str">Call 911</string>
+    <string name="call_btn_str">Call</string>
+    <string name="work_emergency_str">Work Emergency \n Phone Number</string>
+    <string name="work_emergency_btn_str">Call</string>
+    <string name="emergency_tips_str">This is a list of emergency tips for the tenants \n People can find what they
+    need to know \n about basic emergency situations</string>
+    <string name="create_str">Creat Account</string>
+    <string name="login_str">Log In</string>
+    <string name="login_btn_str">Log In / Create Account</string>
+    <string name="email_text_str">Email</string>
+    <string name="password_text_str">Password</string>
+    <string name="question_str">Are yu omving from a HUD subsidized property?</string>
+    <string name="if_yes_str">If yes: Property Name: </string>
+    <string name="property_number_str">Property Phone Number: </string>
+    <string name="submit_btn_str">Submit</string>
+
+    <string name="category_str">Category</string>
+    <string name="issue_str">Issue</string>
+    <string name="permission_str">Permission to Enter</string>
+    <string name="contact_str">Contact Information: </string>
+    <string name="apt_str">Apartament Number: </string>
+
+    <string name="tips_title_str">Tips</string>
+    <string name="tips_textbox_str">This is where the tips are going \n to be posted </string>
+    <string name="contact_cp_str">Centennial Parrk Apartaments </string>
+    <string name="cp_info_str">1000 4th Ave. Kearney, NE, 68845 \n (308) - 111111111 \n centennial@centennial</string>
+    <string name="pv_contact_str">Praire View Apartaments \n South Praire View Apartamentes</string>
+    <string name="pv_info_str">211 E 8th St. \n Kearney, NE \n 68847 \n 308-112222 \n praireview@fp.com</string>
+    <string name="head_str">Headquarter</string>
+    <string name="head_info_str">380 Mapple St. 322322 \n 56789056 \n tiffany@gmail.com</string>
+
+
+</resources>
