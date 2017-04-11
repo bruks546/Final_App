@@ -9,7 +9,7 @@
     mysqli_stmt_bind_param($statement, "s", $username);
     mysqli_stmt_execute($statement);
     mysqli_stmt_store_result($statement);
-    mysqli_stmt_bind_result($statement, $colUserID, $colName, $colUsername, $colAge, $colPassword);
+    mysqli_stmt_bind_result($statement, $colUserID, $colName, $colUsername, $colunitNum, $colPassword);
     
     $response = array();
     $response["success"] = false;  
@@ -18,7 +18,7 @@
         if (password_verify($password, $colPassword)) {
             $response["success"] = true;  
             $response["name"] = $colName;
-            $response["age"] = $colAge;
+            $response["unitNum"] = $colunitNumb;
         }
     }
     echo json_encode($response);
