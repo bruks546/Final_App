@@ -5,22 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Centennial extends AppCompatActivity {
+public class SelectProperty extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_centennial);
+        setContentView(R.layout.activity_select_property);
     }
-
-    public void ApplyBtn(View view){
-        Intent intent = new Intent(this, SelectProperty.class);
-
-        startActivity(intent);
-    }
-
-    public void LocationBtn(View view){
-        Intent intent = new Intent(this, Location.class);
+    public void ContinueBtn(View view){
+        Intent intent = new Intent(this, Application.class);
 
         startActivity(intent);
     }

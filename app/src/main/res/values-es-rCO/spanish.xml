@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="exploreBtn">Explorar</string>
+    <string name="logInBtn">Iniciar Seccion</string>
+    <string name="locationBtn">Ubicación</string>
+    <string name="threeCpBtnAply">Aplicar </string>
+    <string name="twoCpBtnAplly">Aplicar</string>
+    <string name="centennial_Title">Centennial Park Apartamentos de Kearney</string>
+    <string name="application_str" translatable="false">Aplicacion para vivienda</string>
+    <string name="a_appli_str" translatable="false">A. Solicitante: </string>
+    <string name="name_str">Nombre</string>
+    <string name="address_str" translatable="false">Dirección: </string>
+    <string name="city_str">Ciudad: </string>
+    <string name="state_str">Estado: </string>
+    <string name="zip_str">Codigo Postal: </string>
+    <string name="phone_str">Telefono: </string>
+    <string name="student_radio">Estudiante: </string>
+    <string name="yes_radio">Si</string>
+    <string name="no_radio">No</string>
+    <string name="relative_title_str">Nombre, Dirección, y telefono de Relativo o Familiar/string</string>
+    <string name="rel_name_str">Nombre </string>
+    <string name="rel_relation_str">Relación </string>
+    <string name="title_activity_log_in">Registrarse</string>
+    <string name="relative_2_title">Relativo 2:</string>
+    <string name="property_number">Numero de Telefono de Propiedad</string>
+    <string name="continue_btn">Continuar >></string>
+
+    <string name="tenant_name_str">Nombre del Solicitante</string>
+    <string name="tips_str">Estos van ha hacer los trucos mas sobresalientes</string>
+    <string name="news_str">This are going to be the news that we send evy month</string>
+    <string name="service_request_str">Crear una Order de Serivicio</string>
+    <string name="emergency_str">Emergencia</string>
+    <string name="call911_str">Lamar 911</string>
+    <string name="call_btn_str">Lamar</string>
+    <string name="work_emergency_str">Emergencia de Trabajo \n Numero de Telefono</string>
+    <string name="work_emergency_btn_str">Llamar</string>
+    <string name="emergency_tips_str">Este es un listad de los ejemplos de emergencias \n Personas pueden encontrar la informacion que ellos necesitan
+        \n acerca de emergencias</string>
+    <string name="create_str">Crear Cuenta</string>
+    <string name="login_str">Iniciar Seccion</string>
+    <string name="login_btn_str">Inciar Seccion / Crear Cuenta</string>
+    <string name="email_text_str">Email</string>
+    <string name="password_text_str">Contraseña</string>
+    <string name="question_str">Te estas mudando de una propiedad HUD?</string>
+    <string name="if_yes_str">Si es así, Nombre de la propiedad: </string>
+    <string name="property_number_str">Numero de Telefono: </string>
+    <string name="submit_btn_str">Envíar</string>
+
+    <string name="category_str">Categoría</string>
+    <string name="issue_str">Problema</string>
+    <string name="permission_str">Permiso para entrar </string>
+    <string name="contact_str">Informacion de Contacto: </string>
+    <string name="apt_str">Numero de apartamento: </string>
+
+    <string name="tips_title_str">Consejos:</string>
+    <string name="tips_textbox_str">Acá es donde los consejos van a ser publicados </string>
+    <string name="contact_cp_str">Centennial Parrk Apartaments </string>
+    <string name="cp_info_str">1000 4th Ave. Kearney, NE, 68845 \n (308) - 111111111 \n centennial@centennial</string>
+    <string name="pv_contact_str">Praire View Apartaments \n South Praire View Apartamentes</string>
+    <string name="pv_info_str">211 E 8th St. \n Kearney, NE \n 68847 \n 308–112222 \n praireview@fp.com</string>
+    <string name="head_str">Ofina Principal</string>
+    <string name="head_info_str">380 Mapple St. 322322 \n 56789056 \n tiffany@gmail.com</string>
+
+    <string name="present_house">B. Estado Actual de Vivienda/</string>
+    <string name="have_hud_str">Has aplicado con nosotros antes?</string>
+    <string name="under_name">Si es así, con que nombre: </string>
+    <string name="when">Cuando :</string>
+    <string name="date">Fecha</string>
+    <string name="name_landlord">Arrendatario actualmente: </string>
+    <string name="prev_land">Abterior Arrendatario: </string>
+    <string name="c_title_strt">C. Composición de Familia: </string>
+    <string name="c_list">Enumere Jefe de la casa y otras personas que van a vivir en el hogar. </string>
+    <string name="Uno">1. </string>
+    <string name="age">Edad</string>
+    <string name="brth_str">fecha de Naciento</string>
+    <string name="full_name">Nombre completo</string>
+    <string name="social_number"># De Seguro Social</string>
+    <string name="relative_handycap">Alguno de los familiares tiene deshabilidades?</string>
+    <string name="if_handy">Si es así, que deshabilidad y que miembro de familia? </string>
+
+    <string name="application_D">D. Ingresos</string>
+    <string name="income_pr"> Enumere el ingreso de las personas que van a vivir en el hogar.
+        Esto incluye todos los ingresos de tiempo completo o medio tiempo. Ingresos por asistencia social, seguro social, pensión, SSI (Ingresos por Seguro Social),
+        ingresos por discacidad, ingresos de desempleo, cuidado de niños, o ingresos regulares por cualquier otro medio.</string>
+    <string name="d_family_me">Miembro Familiar: </string>
+    <string name="income_source">Tipos de Ingreso</string>
+    <string name="gross_income">Ingresos Brutos</string>
+
+    <string name="assets">E. Bienes: </string>
+    <string name="have_checking">Tine cuenta de ahorros? </string>
+    <string name="bank">En que Banco? </string>
+    <string name="have_saving">Tiene Cuenta de ahorros? </string>
+    <string name="saving_bank">En que Banco? </string>
+    <string name="property">Tienes alguna propiedad nmobilaria?</string>
+    <string name="property_if">Si es así: Que tipo de propiedad </string>
+    <string name="did_have_asset">Tienes alguna otra propieda en los dos últimos años que no ha sido enumerada anteriormente? </string>
+    <string name="valuation_if">Si es así, Se desihizo de alguna de las propiedades anterioete mencionadas por menos de lo que están avaluadas?  </string>
+    <string name="hiint_valuation">(This means that the assets were either given away or solt ar less than the alloted market valued.)</string>
+    <string name="what_assets_market_value">What were the assets, the market value at the time of disposition, the amount received and the date that you disposed of them? </string>
+    <string name="vihecle_qst">Tiene vehiculo? </string>
+    <string name="make">Fabricante</string>
+    <string name="model">Modelo</string>
+    <string name="year">Año</string>
+    <string name="license">Licencia #</string>
+    <string name="hear_about">De donde esucho de nosotros? </string>
+    <string name="self_sufficient">Se puede cuidar de usted mismo? </string>
+    <string name="abide_lease">Puede mantener los terminos del Contrato? </string>
+    <string name="agree_str">Estoy de cuerdo con el administrador y le doy autoridad de verificar mi pasado crediticio
+        y mi pasado de rendatarios. La informacion obtenida será usada con el fin y estrictamente confidenciales.
+        La informacion anterior es verdadera y con el mejor de mi conocimiento.</string>
+    <string name="understand">ENTIENDO QUE ESTA APLICACION TARDARA POR LO MENOS 6 SEMANAS PARA PROCESAR. </string>
+    <string name="signature">FIRMA</string>
+    <string name="thanks">Graciar por aplicar con \n Franssen Properties, Inc.</string>
+</resources>

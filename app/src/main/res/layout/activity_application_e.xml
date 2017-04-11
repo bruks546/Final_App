@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/assets"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView28"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/textView28"
+            android:layout_below="@+id/textView28"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="11dp"
+            android:text="@string/have_checking"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView31"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/textView31"
+            android:layout_toRightOf="@+id/textView31"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/check_yes"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_radio" />
+
+            <RadioButton
+                android:id="@+id/check_no"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no_radio" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/check_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView31"
+            android:layout_alignStart="@+id/textView31"
+            android:layout_below="@+id/textView31"
+            android:layout_marginTop="13dp"
+            android:ems="10"
+            android:hint="@string/bank"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView31"
+            android:layout_alignLeft="@+id/check_bank"
+            android:layout_alignRight="@+id/textView31"
+            android:layout_alignStart="@+id/check_bank"
+            android:layout_below="@+id/check_bank"
+            android:layout_marginTop="17dp"
+            android:text="@string/have_saving"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/saving_ratio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView44"
+            android:layout_alignEnd="@+id/radioGroup2"
+            android:layout_alignLeft="@+id/radioGroup2"
+            android:layout_alignRight="@+id/radioGroup2"
+            android:layout_alignStart="@+id/radioGroup2"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/saving_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.43"
+                android:text="@string/yes_radio" />
+
+            <RadioButton
+                android:id="@+id/saving_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/no_radio" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/saving_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView44"
+            android:layout_alignStart="@+id/textView44"
+            android:layout_below="@+id/textView44"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/bank"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView44"
+            android:layout_alignLeft="@+id/saving_bank"
+            android:layout_alignRight="@+id/textView44"
+            android:layout_alignStart="@+id/saving_bank"
+            android:layout_below="@+id/saving_bank"
+            android:layout_marginTop="18dp"
+            android:text="@string/property"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/saving_ratio"
+            android:layout_alignStart="@+id/saving_ratio"
+            android:layout_alignTop="@+id/textView45"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/property_yes"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_radio" />
+
+            <RadioButton
+                android:id="@+id/properety_no"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no_radio" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView45"
+            android:layout_alignStart="@+id/textView45"
+            android:layout_below="@+id/textView45"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:hint="@string/property_if"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView45"
+            android:layout_alignLeft="@+id/value_text"
+            android:layout_alignRight="@+id/textView45"
+            android:layout_alignStart="@+id/value_text"
+            android:layout_below="@+id/value_text"
+            android:layout_marginTop="12dp"
+            android:text="@string/did_have_asset"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioGroup3"
+            android:layout_alignStart="@+id/radioGroup3"
+            android:layout_alignTop="@+id/textView46"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/no_listed_yes"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_radio" />
+
+            <RadioButton
+                android:id="@+id/no_listed_no"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no_radio" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView46"
+            android:layout_alignStart="@+id/textView46"
+            android:layout_below="@+id/textView46"
+            android:layout_marginTop="16dp"
+            android:text="@string/valuation_if"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/valuation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView47"
+            android:layout_alignStart="@+id/textView47"
+            android:layout_below="@+id/textView47"
+            android:layout_marginTop="21dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/valuation_text"
+            android:layout_alignStart="@+id/valuation_text"
+            android:layout_below="@+id/valuation_text"
+            android:text="@string/hiint_valuation" />
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView48"
+            android:layout_alignStart="@+id/textView48"
+            android:layout_below="@+id/textView48"
+            android:layout_marginTop="12dp"
+            android:text="@string/what_assets_market_value"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/marketvalue_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView49"
+            android:layout_alignStart="@+id/textView49"
+            android:layout_below="@+id/textView49"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/marketvalue_text"
+            android:layout_alignStart="@+id/marketvalue_text"
+            android:layout_below="@+id/marketvalue_text"
+            android:layout_marginTop="18dp"
+            android:text="@string/vihecle_qst"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView50"
+            android:layout_toEndOf="@+id/textView46"
+            android:layout_toRightOf="@+id/textView46"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/vehicle_yes"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_radio" />
+
+            <RadioButton
+                android:id="@+id/vehicle_no"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:text="@string/no_radio" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/make_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/model_text"
+            android:layout_alignStart="@+id/model_text"
+            android:layout_below="@+id/radioGroup5"
+            android:layout_marginTop="13dp"
+            android:ems="10"
+            android:hint="@string/make"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/model_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView50"
+            android:layout_alignStart="@+id/textView50"
+            android:layout_below="@+id/make_text"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="@string/model"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/year_text"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/make_text"
+            android:layout_alignBottom="@+id/make_text"
+            android:layout_alignLeft="@+id/radioGroup4"
+            android:layout_alignStart="@+id/radioGroup4"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:ems="10"
+            android:hint="@string/year"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/license_text"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/model_text"
+            android:layout_alignBottom="@+id/model_text"
+            android:layout_alignLeft="@+id/year_text"
+            android:layout_alignStart="@+id/year_text"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/license" />
+
+        <Button
+            android:id="@+id/continue_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/model_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:onClick="FinalBtn"
+            android:text="@string/continue_btn" />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

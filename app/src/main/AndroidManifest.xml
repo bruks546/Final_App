@@ -4,6 +4,7 @@
     package="com.example.edwingariza.franssenpropertiesinc"
     tools:overrideLibrary="com.google.android.gms.maps">
 
+    <user-permission android:name = "android.permission.INTERNET"></user-permission>
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -16,23 +17,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+
+                  android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
         <activity android:name=".Explore" />
         <activity android:name=".Centennial" />
-        <activity android:name=".Apply" />
         <activity android:name=".Location" />
         <activity android:name=".Tenant" />
         <activity android:name=".Emergency" />
         <activity android:name=".LogIn" />
         <activity android:name=".ServiceRequest" />
         <activity android:name=".Tips" />
-        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".ContactUs" />
+        <activity android:name=".Application" />
+        <activity android:name=".ContinueApply" />
+        <activity android:name=".Continue_C" />
+        <activity android:name=".ApplicationD" />
+        <activity android:name=".ApplicationE" />
+        <activity android:name=".ContinueFinal" />
+        <activity android:name=".SelectProperty" />
+        <activity android:name=".Register"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@
     <string name="locationBtn">Location</string>
     <string name="threeCpBtnAply">Apply </string>
     <string name="twoCpBtnAplly">Apply</string>
+    <string name="centennial_Title">Centennial Park Of Kearney Apartments</string>
     <string name="application_str" translatable="false">Application For Housing</string>
     <string name="a_appli_str" translatable="false">A. Applicant: </string>
     <string name="name_str">Name</string>
@@ -21,6 +22,9 @@
     <string name="rel_name_str">Name: </string>
     <string name="rel_relation_str">Relationship</string>
     <string name="title_activity_log_in">Sign in</string>
+    <string name="relative_2_title">Relative 2:</string>
+    <string name="property_number">Property Phone Number</string>
+    <string name="continue_btn">Continue >></string>
 
     <string name="tenant_name_str">Tenant Name</string>
     <string name="tips_str">This are going to be the long test about the tips in the apt</string>
@@ -35,7 +39,8 @@
     need to know \n about basic emergency situations</string>
     <string name="create_str">Creat Account</string>
     <string name="login_str">Log In</string>
-    <string name="login_btn_str">Log In / Create Account</string>
+    <string name="login_btn_str">Log In </string>
+
     <string name="email_text_str">Email</string>
     <string name="password_text_str">Password</string>
     <string name="question_str">Are yu omving from a HUD subsidized property?</string>
@@ -57,6 +62,66 @@
     <string name="pv_info_str">211 E 8th St. \n Kearney, NE \n 68847 \n 308-112222 \n praireview@fp.com</string>
     <string name="head_str">Headquarter</string>
     <string name="head_info_str">380 Mapple St. 322322 \n 56789056 \n tiffany@gmail.com</string>
+
+    <string name="present_house">B. Present Housing Status</string>
+    <string name="have_hud_str">Have you ever applied for housing with us before?</string>
+    <string name="under_name">If yes, under what name: </string>
+    <string name="when">When :</string>
+    <string name="date">Date</string>
+    <string name="name_landlord">Present Landlord: </string>
+    <string name="prev_land">Previous Landlord: </string>
+    <string name="c_title_strt">C. Family or Household Composition: </string>
+    <string name="c_list">List head of household and all other person who will reside in the unit. </string>
+    <string name="Uno">1. </string>
+    <string name="age">Age</string>
+    <string name="brth_str">Birth Date</string>
+    <string name="full_name">Full Name</string>
+    <string name="social_number">Social Security #</string>
+    <string name="relative_handycap">Any of the Family members have any disability?</string>
+    <string name="if_handy">If so, which member and what is the disibility of handicap? </string>
+
+    <string name="application_D">D. Income</string>
+    <string name="income_pr">List all income sources for all members or persons who will reside in the unit. This includes income from full and/or part time employment. Income from welfare agencies, social security, pensions, SSI, disability income, unemployment income, child care, or regular income from any other source.</string>
+    <string name="d_family_me">Family Member: </string>
+    <string name="income_source">Type and Source of Income</string>
+    <string name="gross_income">Gross Income</string>
+
+    <string name="assets">E. Assets: </string>
+    <string name="have_checking">Do you have a checking account? </string>
+    <string name="bank">What Bank? </string>
+    <string name="have_saving">Do you have a saving account? </string>
+    <string name="saving_bank">What Bank? </string>
+    <string name="property">Do you have any real estate property?</string>
+    <string name="property_if">If so, valuation of property: </string>
+    <string name="did_have_asset">Did you have any assets in the last two years not listed above? </string>
+    <string name="valuation_if">If yes, Did you dispose of any asset for less than fair market value?  </string>
+    <string name="hiint_valuation">(This means that the assets were either given away or solt ar less than the alloted market valued.)</string>
+    <string name="what_assets_market_value">What were the assets, the market value at the time of disposition, the amount received and the date that you disposed of them? </string>
+    <string name="vihecle_qst">Do you own a vehicle? </string>
+    <string name="make">Make</string>
+    <string name="model">Modek</string>
+    <string name="year">Year</string>
+    <string name="license">License PLate #</string>
+    <string name="hear_about">How did you hear about the property? </string>
+    <string name="self_sufficient">Are you self_sufficient and able to care for yourself? </string>
+    <string name="abide_lease">Are you able to abide by the terms of the least? </string>
+    <string name="agree_str">I agree to give the management agent the authority to investigate my credit rating and my current and past rental record. The information obtained will be used for the management purposes only and will be held in strict confidence. The above information is true and correct to the best of my knowledge.</string>
+    <string name="understand">I UNDERSTAND THAT THIS APPLICATION MAY TAKE A MINIMUM OF SIX WEEKS TO PROCESS. </string>
+    <string name="signature">SIGNATURE</string>
+    <string name="thanks">Thank for Appliying with \n Franssen Properties, Inc.</string>
+
+
+
+    <string name="select_property_title">Select a Property to apply </string>
+    <string name="pv_name_str">Prairie View Apartments of Kearney</string>
+    <string name="spv_name_str">South Prairie View Apartments</string>
+
+    <string name="register">Register</string>
+    <string name="enter_user">Enter Username</string>
+    <string name="enter_pass">Enter Password</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="create_btn_str">Create Account</string>
+    <string name="unit_name_reg">Enter Unit Number</string>
 
 
 </resources>
