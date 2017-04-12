@@ -346,7 +346,6 @@
             android:layout_below="@+id/model_text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="42dp"
-            android:onClick="FinalBtn"
             android:text="@string/continue_btn" />
 
     </RelativeLayout>

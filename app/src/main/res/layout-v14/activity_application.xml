@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="1400dp">
 
 
         <GridLayout
@@ -156,14 +156,14 @@
             android:textSize="24sp" />
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioGroup"
-            android:layout_alignTop="@+id/textView22"
+            android:layout_alignEnd="@+id/textView27"
             android:layout_alignLeft="@+id/apply_conti_btn"
-            android:layout_alignStart="@+id/apply_conti_btn"
             android:layout_alignRight="@+id/textView27"
-            android:layout_alignEnd="@+id/textView27">
+            android:layout_alignStart="@+id/apply_conti_btn"
+            android:layout_alignTop="@+id/textView22">
 
             <RadioButton
                 android:id="@+id/yes_stud"
@@ -188,12 +188,12 @@
             android:id="@+id/textView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rel_name_1"
+            android:layout_alignStart="@+id/rel_name_1"
+            android:layout_below="@+id/radioGroup"
             android:layout_marginTop="27dp"
             android:text="@string/relative_title_str"
-            android:textSize="14sp"
-            android:layout_below="@+id/radioGroup"
-            android:layout_alignLeft="@+id/rel_name_1"
-            android:layout_alignStart="@+id/rel_name_1" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/rel_name_1"
@@ -251,7 +251,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/relation_rel_2"
+            android:id="@+id/relation_relation_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/name_rel_2"
@@ -265,12 +265,12 @@
             android:id="@+id/address_rel_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/relation_rel_2"
-            android:layout_alignStart="@+id/relation_rel_2"
-            android:layout_below="@+id/relation_rel_2"
             android:ems="10"
             android:hint="@string/address_str"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_below="@+id/relation_relation_2"
+            android:layout_alignLeft="@+id/relation_relation_2"
+            android:layout_alignStart="@+id/relation_relation_2" />
 
         <EditText
             android:id="@+id/phone_rel_2"
@@ -287,9 +287,8 @@
             android:id="@+id/apply_conti_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/property_phone_text"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="91dp"
             android:onClick="ContinueBtn"
             android:text="@string/continue_btn" />
 
@@ -297,54 +296,51 @@
             android:id="@+id/textView26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
             android:text="@string/question_str"
             android:textSize="18sp"
-            android:layout_below="@+id/phone_rel_2"
-            android:layout_toRightOf="@+id/gridLayout"
-            android:layout_toEndOf="@+id/gridLayout" />
+            android:layout_marginTop="144dp"
+            android:layout_below="@+id/relation_relation_2"
+            android:layout_alignLeft="@+id/relation_relation_2"
+            android:layout_alignStart="@+id/relation_relation_2" />
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/property_phone_text"
-            android:layout_alignStart="@+id/property_phone_text"
-            android:layout_below="@+id/hud_Radio_group"
-            android:layout_marginTop="18dp"
             android:text="@string/if_yes_str"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_below="@+id/hud_Radio_group"
+            android:layout_centerHorizontal="true" />
 
         <EditText
             android:id="@+id/property_name_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView27"
-            android:layout_alignStart="@+id/textView27"
-            android:layout_below="@+id/textView27"
-            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="@string/name_str"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_below="@+id/hud_Radio_group"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="36dp" />
 
         <EditText
             android:id="@+id/property_phone_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/apply_conti_btn"
-            android:layout_alignRight="@+id/apply_conti_btn"
-            android:layout_below="@+id/property_name_text"
-            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="@string/property_number"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/property_name_text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <RadioGroup
             android:id="@+id/hud_Radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView26"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="17dp"
             android:fadingEdge="horizontal"
             android:requiresFadingEdge="horizontal">

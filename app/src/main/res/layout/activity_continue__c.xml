@@ -83,7 +83,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/brth_1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/relation_rel_1"
@@ -134,8 +134,8 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/name_relative_2"
             android:layout_alignBottom="@+id/name_relative_2"
-            android:layout_alignLeft="@+id/editText7"
-            android:layout_alignStart="@+id/editText7"
+            android:layout_alignLeft="@+id/brth_1"
+            android:layout_alignStart="@+id/brth_1"
             android:ems="10"
             android:hint="@string/age"
             android:inputType="number" />
@@ -268,7 +268,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/age_4"
+            android:id="@+id/age_rel_4"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/name_relative_4"
@@ -295,12 +295,13 @@
             android:id="@+id/brth_4"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/age_4"
-            android:layout_alignRight="@+id/age_4"
+            android:layout_alignEnd="@+id/age_rel_4"
+            android:layout_alignRight="@+id/age_rel_4"
             android:layout_alignTop="@+id/relation_rel_4"
             android:ems="10"
             android:hint="@string/brth_str"
             android:inputType="date" />
+
 
         <EditText
             android:id="@+id/social_rel_4"

@@ -40,7 +40,7 @@
         \n acerca de emergencias</string>
     <string name="create_str">Crear Cuenta</string>
     <string name="login_str">Iniciar Seccion</string>
-    <string name="login_btn_str">Inciar Seccion / Crear Cuenta</string>
+    <string name="login_btn_str">Inciar Seccion</string>
     <string name="email_text_str">Email</string>
     <string name="password_text_str">Contraseña</string>
     <string name="question_str">Te estas mudando de una propiedad HUD?</string>

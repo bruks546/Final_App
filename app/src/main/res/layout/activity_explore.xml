@@ -18,13 +18,14 @@
             android:id="@+id/imageButton"
             android:layout_width="280dp"
             android:layout_height="176dp"
-            app:srcCompat="@drawable/cenntenial"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="cenntenialBtn"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp" />
+            app:srcCompat="@drawable/cenntenial" />
 
         <ImageButton
             android:id="@+id/imageButton2"

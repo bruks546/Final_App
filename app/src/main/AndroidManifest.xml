@@ -41,7 +41,8 @@
         <activity android:name=".ContinueApply" />
         <activity android:name=".Continue_C" />
         <activity android:name=".ApplicationD" />
-        <activity android:name=".ApplicationE" />
+        <activity android:name=".ApplicationE"
+            android:exported="true"/>
         <activity android:name=".ContinueFinal" />
         <activity android:name=".SelectProperty" />
         <activity android:name=".Register"
