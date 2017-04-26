@@ -29,14 +29,17 @@
     <string name="tenant_name_str">Tenant Name</string>
     <string name="tips_str">This are going to be the long test about the tips in the apt</string>
     <string name="news_str">This are going to be the news that we send evy month</string>
-    <string name="service_request_str">Create Service Request</string>
+    <string name="service_request_str">Create A Service Request</string>
     <string name="emergency_str">Emergency</string>
-    <string name="call911_str">Call 911</string>
-    <string name="call_btn_str">Call</string>
-    <string name="work_emergency_str">Work Emergency \n Phone Number</string>
-    <string name="work_emergency_btn_str">Call</string>
-    <string name="emergency_tips_str">This is a list of emergency tips for the tenants \n People can find what they
-    need to know \n about basic emergency situations</string>
+    <string name="call911_str">Call 911 Now! \n \nIf your life or the life of others \nare at risk. </string>
+    <string name="call_btn_str">Call 911</string>
+
+
+    <string name="work_emergency_str">Work Emergency \nPhone Number</string>
+    <string name="work_emergency_btn_str">Call Maintenance</string>
+    <string name="emergency_tips_str">For flood. \nTurn the shut off values right away. \nThen call Emergency Phone Number
+    If you see sparks in outlets \nTurn the breakers off located in the electrical box.
+    \n </string>
     <string name="create_str">Creat Account</string>
     <string name="login_str">Log In</string>
     <string name="login_btn_str">Log In </string>
@@ -48,7 +51,7 @@
     <string name="property_number_str">Property Phone Number: </string>
     <string name="submit_btn_str">Submit</string>
 
-    <string name="category_str">Category</string>
+    <string name="category_str">Category: Electrical, Plumbing...</string>
     <string name="issue_str">Issue</string>
     <string name="permission_str">Permission to Enter</string>
     <string name="contact_str">Contact Information: </string>
@@ -57,11 +60,11 @@
     <string name="tips_title_str">Tips</string>
     <string name="tips_textbox_str">This is where the tips are going \n to be posted </string>
     <string name="contact_cp_str">Centennial Parrk Apartaments </string>
-    <string name="cp_info_str">1000 4th Ave. Kearney, NE, 68845 \n (308) - 111111111 \n centennial@centennial</string>
-    <string name="pv_contact_str">Praire View Apartaments \n South Praire View Apartamentes</string>
-    <string name="pv_info_str">211 E 8th St. \n Kearney, NE \n 68847 \n 308-112222 \n praireview@fp.com</string>
+    <string name="cp_info_str">1000 4th Ave. Kearney, NE, \n68845 \nPhone Number: (308)236-6617  \ncentennial@fp.com</string>
+    <string name="pv_contact_str">Praire View Apartaments \nSouth Prairie View Apartments</string>
+    <string name="pv_info_str">211 E 8th St. \n Kearney, NE \n 68847 \nPhone Number: 308-234-4916 \npraireview@fp.com</string>
     <string name="head_str">Headquarter</string>
-    <string name="head_info_str">380 Mapple St. 322322 \n 56789056 \n tiffany@gmail.com</string>
+    <string name="head_info_str">8032 Mapple St. \nOmaha, NE \n322322 \nPhone: (402)391-4500 \ntiffany@gmail.com</string>
 
     <string name="present_house">B. Present Housing Status</string>
     <string name="have_hud_str">Have you ever applied for housing with us before?</string>
@@ -111,7 +114,6 @@
     <string name="thanks">Thank for Appliying with \n Franssen Properties, Inc.</string>
 
 
-
     <string name="select_property_title">Select a Property to apply </string>
     <string name="pv_name_str">Prairie View Apartments of Kearney</string>
     <string name="spv_name_str">South Prairie View Apartments</string>
@@ -122,6 +124,44 @@
     <string name="confirm_pass">Confirm Password</string>
     <string name="create_btn_str">Create Account</string>
     <string name="unit_name_reg">Enter Unit Number</string>
+
+    <string name="select_proper">Please Select One Property!</string>
+    <string name="title_activity_pv_gallery">PvGallery</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <!-- Strings for Menu -->
+    <string name="my_account">My Account</string>
+    <string name="favorites">Favorites</string>
+    <string name="rent_calculator">Rent Calculator</string>
+    <string name="apply">Apply</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about">About</string>
+    <string name="feedback">Feedback</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Rent Calculator -->
+
+    <string name="rent_estimator">Rent Estimator </string>
+    <string name="rent_limit">Income Limits </string>
+
+    <string name="about_us">About Us</string>
+    <string name="about_str">Everyone needs a place to live. \n Franssen Properties was founded in 2003. \n
+        From the first site in our portfolio to now, \n Franssen Properties strives to achieve the greatest tenant satisfaction \n
+        possible within the policies and contracts we operate. \n \n Equal Housing Opportunity</string>
+
+    <string name="feedback_title">We appriciate your Feedback</string>
+    <string name="feedback_enter">Please enter your feedback...</string>
+
+    <string name="send">Send</string>
+
+    <string name="advise">Remember to turn off your stove. \n If you hear leaks or water running call the maintenance phone number \n or set a Service request.</string>
+    <string name="news">Spring is here and that means that it is time for Spring Cleaning \n During the First Two weeks \n of May you can take your Spring Cleaning \n items to the
+    dumspter located in the south west part of the property. </string>
+
+    <string name="enter_service_request">Please enter the next information: </string>
+    <string name="contact_inf">Contact Information</string>
+    <string name="call_now"> Call now!</string>
 
 
 </resources>

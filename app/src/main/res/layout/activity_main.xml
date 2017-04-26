@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+<RelativeLayout
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.edwingariza.franssenpropertiesinc.MainActivity">
+    android:background="@drawable/backk"
+
+    tools:targetApi="ice_cream_sandwich">
+
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_green_dark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 
     <Button
         android:id="@+id/logInBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:onClick="loginBtn"
         android:text="@string/logInBtn"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,15 +41,15 @@
 
     <Button
         android:id="@+id/exploreBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:onClick="exploreButton"
         android:text="@string/exploreBtn"
         app:layout_constraintBaseline_toBaselineOf="@+id/logInBtn"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toRightOf="@+id/logInBtn"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="447dp" />
-</android.support.constraint.ConstraintLayout>
+        app:layout_constraintRight_toRightOf="parent" />
+</RelativeLayout>

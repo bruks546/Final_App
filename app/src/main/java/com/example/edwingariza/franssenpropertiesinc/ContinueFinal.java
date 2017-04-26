@@ -25,8 +25,9 @@ public class ContinueFinal extends AppCompatActivity {
 
 
         btnContinue = (Button) findViewById(R.id.Submit_btn);
-        AddData();
+       // AddData();
     }
+    /**
     public void AddData() {
         btnContinue.setOnClickListener(
                 new View.OnClickListener(){
@@ -38,7 +39,7 @@ public class ContinueFinal extends AppCompatActivity {
                                 editHear.getText().toString());
 
 
-                        if(isInserted = true){
+                        if(isInserted == true){
                             Toast.makeText(ContinueFinal.this,"Congratulations!", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(ContinueFinal.this, MainActivity.class);
                             startActivity(intent);
@@ -53,5 +54,6 @@ public class ContinueFinal extends AppCompatActivity {
                 }
         );
     }
+     */
 
 }

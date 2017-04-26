@@ -1,6 +1,6 @@
 <?php
     require("password.php");
-    $con = mysqli_connect("llocalhost:3306", "id1346251_franssen", "389881", "id1346251_login");
+    $con = mysqli_connect("llocalhost", "id1346251_franssen", "389881", "id1346251_login");
     
     $username = $_POST["username"];
     $password = $_POST["password"];

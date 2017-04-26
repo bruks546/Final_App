@@ -34,11 +34,11 @@ public class ApplicationD extends AppCompatActivity {
 
 
         btnContinue = (Button) findViewById(R.id.continue_e);
-        AddData();
+        //AddData();
 
     }
 
-
+/**
     public void AddData() {
         btnContinue.setOnClickListener(
                 new View.OnClickListener(){
@@ -58,7 +58,7 @@ public class ApplicationD extends AppCompatActivity {
 
 
 
-                        if(isInserted = true){
+                        if(isInserted == true){
                             Toast.makeText(ApplicationD.this,"Please continue", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(ApplicationD.this, ApplicationE.class);
                             startActivity(intent);
@@ -73,6 +73,7 @@ public class ApplicationD extends AppCompatActivity {
                 }
         );
     }
+ */
     }
 
 

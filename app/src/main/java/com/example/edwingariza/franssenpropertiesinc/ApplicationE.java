@@ -31,10 +31,10 @@ public class ApplicationE extends AppCompatActivity {
         editYear = (EditText) findViewById(R.id.year_text);
 
         btnContinue = (Button) findViewById(R.id.continue_final);
-        AddData();
+       // AddData();
 
     }
-
+/**
 
     public void AddData() {
         btnContinue.setOnClickListener(
@@ -53,7 +53,7 @@ public class ApplicationE extends AppCompatActivity {
                                 editYear.getText().toString());
 
 
-                        if(isInserted = true){
+                        if(isInserted == true){
                             Toast.makeText(ApplicationE.this,"Please continue", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(ApplicationE.this, ContinueFinal.class);
                             startActivity(intent);
@@ -68,5 +68,6 @@ public class ApplicationE extends AppCompatActivity {
                 }
         );
     }
+ */
     }
 

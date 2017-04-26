@@ -10,6 +10,7 @@
         android:id="@+id/textView54"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:gravity="center_horizontal"
         android:text="@string/register"
         android:textAlignment="center"
@@ -66,8 +67,10 @@
         android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:paddingTop="10dp"/>
+        android:layout_marginTop="20dp"
+        android:onClick="onSignUpClick"
+        android:paddingTop="10dp"
+        android:text="@string/register" />
 
 
      

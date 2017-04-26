@@ -4,9 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.PopupMenu;
+import android.support.v7.widget.Toolbar;
+import android.view.Display;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -17,76 +24,160 @@ import org.json.JSONObject;
 
 public class LogIn extends AppCompatActivity {
 
+    DatabaseHelper helper = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        final EditText USER_NAME = (EditText) findViewById(R.id.enter_username);
-        final EditText USER_PASS= (EditText) findViewById(R.id.enter_pass);
-        final Button LOGIN = (Button) findViewById(R.id.logIn_btn);
-        final Button CREATE_BTN = (Button) findViewById(R.id.create_acc_btn);
 
-        CREATE_BTN.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LogIn.this, Register.class);
-                LogIn.this.startActivity(intent);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+    }
+
+    public void onButtonClick(View v)
+    {
+        if(v.getId() == R.id.login_button)
+        {
+            EditText ed = (EditText)findViewById(R.id.email_text);
+            String str = ed.getText().toString();
+
+            EditText p = (EditText)findViewById(R.id.password_text);
+            String pass = p.getText().toString();
+
+            String password = helper.searchPass(str);
+
+            if(pass.equals(password))
+            {
+                Intent in = new Intent(LogIn.this, Tenant.class);
+                in.putExtra("Username", str);
+
+                startActivity(in);
+            }
+            else {
+                Toast.makeText(LogIn.this, "Username and Password don't match!", Toast.LENGTH_LONG).show();
             }
 
-        });
-
-        LOGIN.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                final String username = USER_NAME.getText().toString();
-                final String password = USER_PASS.getText().toString();
-
-                Response.Listener<String> responseListener = new Response.Listener<String>(){
-                    @Override
-                    public void onResponse(String response){
-
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
-
-                            if(success){
-
-                                String  name = jsonResponse.getString("name");
-                                String  unitNum = jsonResponse.getString("unitNum");
-
-                                Intent intent = new Intent(LogIn.this, Tenant.class);
-                                intent.putExtra("name", name);
-                                intent.putExtra("unitNum", unitNum);
-
-                                LogIn.this.startActivity(intent);
-
-                            }
-                            else{
-                                AlertDialog.Builder  builder = new AlertDialog.Builder(LogIn.this);
-                                builder.setMessage("Login failed")
-                                        .setNegativeButton("Retry", null)
-                                        .create()
-                                        .show();
-                            }
 
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+        }
+        if(v.getId()==R.id.signup_button)
+        {
+            Intent in = new Intent(LogIn.this, Register.class);
+            startActivity(in);
+        }
 
-                    }
-                };
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.actions, menu);
+        return true;
+    }
 
-                LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(LogIn.this);
-                queue.add(loginRequest);
-            }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
-        });
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.my_account) {
 
+            TenantOpt();
+            return true;
+        }
+
+        else if (id == R.id.rent_calculator) {
+
+            RentCal();
+
+
+
+            return true;
+        }
+        else if (id == R.id.apply) {
+
+
+            ApplyInt();
+
+
+            return true;
+        }
+
+        else if (id == R.id.contact_us) {
+
+            ContactUs();
+
+            return true;
+        }
+        else if (id == R.id.about) {
+
+            AboutInt();
+
+            return true;
+        }
+        else if (id == R.id.feedback) {
+
+            FeedB();
+
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void FeedB(){
+        Intent intent = new Intent(this, Feedback.class);
+
+        startActivity(intent);
+    }
+    public void TenantOpt(){
+        Intent intent = new Intent(this, Tenant.class);
+
+        startActivity(intent);
+    }
+    public void AboutInt(){
+        Intent intent = new Intent(this, About.class);
+
+        startActivity(intent);
+    }
+
+
+    public void ApplyInt(){
+        Intent intent = new Intent(this, Application.class);
+
+        startActivity(intent);
+    }
+
+    public void ContactUs(){
+        Intent intent = new Intent(this, ContactUs.class);
+
+        startActivity(intent);
+    }
+
+    public void RentCal(){
+        Intent intent = new Intent(this, RentCalculator.class);
+
+        startActivity(intent);
     }
 
 
 
+
+    public void showPopup(View v){
+        PopupMenu popup = new PopupMenu(this, v);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.actions, popup.getMenu());
+        popup.show();
+    }
+
+    public void LogInBtn(View view){
+        Intent intent = new Intent(this, Tenant.class);
+
+        startActivity(intent);
+    }
 }

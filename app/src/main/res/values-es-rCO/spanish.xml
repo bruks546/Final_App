@@ -113,4 +113,6 @@
     <string name="understand">ENTIENDO QUE ESTA APLICACION TARDARA POR LO MENOS 6 SEMANAS PARA PROCESAR. </string>
     <string name="signature">FIRMA</string>
     <string name="thanks">Graciar por aplicar con \n Franssen Properties, Inc.</string>
+
+    <string name="select_proper">Seleccione un Complejo!</string>
 </resources>

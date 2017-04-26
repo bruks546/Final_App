@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 
 public class Register extends AppCompatActivity {
+    DatabaseHelper helper = new DatabaseHelper(this);
 
 
 
@@ -27,60 +28,63 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+    }
+
+    public void UnitName(){
+
+        EditText nn = (EditText)findViewById(R.id.enter_username);
+        String str = nn.getText().toString();
+
+        EditText uu = (EditText)findViewById(R.id.unit_num_register);
+        String uustr = uu.getText().toString();
+
+        Intent in = new Intent(Register.this, Tenant.class);
+        in.putExtra("Username", str);
+        in.putExtra("Unit", uustr);
+        startActivity(in);
+
+    }
+    public void onSignUpClick(View v)
+    {
+        if(v.getId() == R.id.register_btn){
+            EditText NAME = (EditText) findViewById(R.id.register_name);
+            EditText UNIT = (EditText) findViewById(R.id.unit_num_register);
+            EditText USER_NAME = (EditText) findViewById(R.id.enter_username);
+            EditText USER_PASS= (EditText) findViewById(R.id.enter_pass);
+            EditText CONF_PASS = (EditText) findViewById(R.id.confirm_pass);
+
+            String name = NAME.getText().toString();
+            String unit = UNIT.getText().toString();
+            String username = USER_NAME.getText().toString();
+            String user_pass = USER_PASS.getText().toString();
+            String conf_pass = CONF_PASS.getText().toString();
 
 
 
-        final EditText NAME = (EditText) findViewById(R.id.register_name);
-        final EditText UNIT = (EditText) findViewById(R.id.unit_num_register);
-        final EditText USER_NAME = (EditText) findViewById(R.id.enter_username);
-        final EditText USER_PASS= (EditText) findViewById(R.id.enter_pass);
-        final EditText CONF_PASS = (EditText) findViewById(R.id.confirm_pass);
-        final Button CREATE_BTN = (Button) findViewById(R.id.register_btn);
-
-        CREATE_BTN.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                final String name = NAME.getText().toString();
-                final String unit = UNIT.getText().toString();
-                final String username = USER_NAME.getText().toString();
-                final String user_pass = USER_PASS.getText().toString();
-                final String conf_pass = CONF_PASS.getText().toString();
-
-                Response.Listener<String> responseListener = new Response.Listener<String>(){
-                    @Override
-                    public void onResponse(String response){
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
-
-                            if(success){
-                                Intent intent = new Intent(Register.this, LogIn.class);
-                                Register.this.startActivity(intent);
-                            }
-                            else{
-                                AlertDialog.Builder  builder = new AlertDialog.Builder(Register.this);
-                                builder.setMessage("Register failed")
-                                    .setNegativeButton("Retry", null)
-                                    .create()
-                                    .show();
-                            }
-
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                };
-                RegisterRequest registerRequest = new RegisterRequest(name, unit, username, user_pass, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(Register.this);
-                queue.add(registerRequest);
-
+            if(!user_pass.equals(conf_pass))
+            {
+                Toast.makeText(Register.this, "Passwords don't match!", Toast.LENGTH_LONG).show();;
             }
-        });
+            else{
+                Contact c = new Contact();
+                c.setName(name);
+                c.setUnit(unit);
+                c.setUserename(username);
+                c.setPass(user_pass);
 
+
+                helper.insertContact(c);
+
+                UnitName();
+            }
+
+
+        }
+
+
+    }
 
 
 
     }
-}
+
