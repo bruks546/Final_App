@@ -9,51 +9,35 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class ContinueFinal extends AppCompatActivity {
-    DbHandler dbHelper;
+    DatabaseFinal helper = new DatabaseFinal(this);
     EditText editHear ;
-    Button btnContinue;
+    String Hear;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_continue_final);
-        dbHelper = new DbHandler(this);
+        String name = getIntent().getStringExtra("Name");
+
+        Toast.makeText(ContinueFinal.this, "The last Page " + name, Toast.LENGTH_SHORT).show();
 
 
+    }
+
+    public void ContinueAppDone(View v)
+    {
         editHear = (EditText) findViewById(R.id.hear_text);
+        Hear = editHear.getText().toString();
 
+        AppGetSetFinal r = new AppGetSetFinal();
 
+        r.setHear_property(Hear);
 
-        btnContinue = (Button) findViewById(R.id.Submit_btn);
-       // AddData();
+        helper.insertApplicantFinal(r);
+        Intent in = new Intent(ContinueFinal.this, LogIn.class);
+
+        startActivity(in);
     }
-    /**
-    public void AddData() {
-        btnContinue.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        boolean isInserted = dbHelper.insertFinal(
-
-
-                                editHear.getText().toString());
-
-
-                        if(isInserted == true){
-                            Toast.makeText(ContinueFinal.this,"Congratulations!", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(ContinueFinal.this, MainActivity.class);
-                            startActivity(intent);
-
-
-                        }
-
-                        else
-                            Toast.makeText(ContinueFinal.this,"Please Enter Information", Toast.LENGTH_LONG).show();
-
-                    }
-                }
-        );
-    }
-     */
 
 }

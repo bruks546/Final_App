@@ -11,75 +11,48 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ContinueApply extends AppCompatActivity {
-    DbHandler dbHelper;
-    EditText editUnderName, editWhen, editCurrentLand, editCurrentPhone, editPreLanName, editPreLandPhone;
-    Button btnContinue;
+    DatabaseAppB helper = new DatabaseAppB(this);
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_continue_apply);
-        dbHelper = new DbHandler(this);
 
-        String username = getIntent().getStringExtra("Name");
-        //TextView tv = (TextView)findViewById(R.id.tenant_name);
-        //tv.setText(username);
-
-
-        editUnderName = (EditText) findViewById(R.id.name_have);
-        editWhen = (EditText) findViewById(R.id.when_text) ;
-        editCurrentLand = (EditText) findViewById(R.id.landlord_name);
-        editCurrentPhone = (EditText) findViewById(R.id.land_phone);
-        editPreLanName = (EditText) findViewById(R.id.prev_name);
-        editPreLandPhone = (EditText) findViewById(R.id.prev_phone);
-
-
-
-
-        btnContinue = (Button) findViewById(R.id.button);
-       // AddData();
 
     }
-    /**
+    public void onClickContinueC(View view){
+
+            EditText editUnderName = (EditText) findViewById(R.id.name_have);
+            EditText editWhen = (EditText) findViewById(R.id.when_text) ;
+            EditText editCurrentLand = (EditText) findViewById(R.id.landlord_name);
+            EditText editCurrentPhone = (EditText) findViewById(R.id.land_phone);
+            EditText editPreLanName = (EditText) findViewById(R.id.prev_name);
+            EditText editPreLandPhone = (EditText) findViewById(R.id.prev_phone);
+
+            String underName = editUnderName.getText().toString();
+            String when = editWhen.getText().toString();
+             String land=  editCurrentLand.getText().toString();
+              String landphone= editCurrentPhone.getText().toString();
+              String prename = editPreLanName.getText().toString();
+              String prephone   =   editPreLandPhone.getText().toString();
+
+            ApplicationBGetSet c = new ApplicationBGetSet();
+            c.setUnder_name(underName);
+            c.setWhen_have(when);
+            c.setLandlord_name(land);
+            c.setLandlord_phone(landphone);
+            c.setPre_landlord_name(prename);
+            c.setLandlord_phone(prephone);
 
 
-    public void AddData() {
-        btnContinue.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        boolean isInserted = dbHelper.insertB(
-
-                                editUnderName.getText().toString(),
-                                editWhen.getText().toString(),
-                                editCurrentLand.getText().toString(),
-                                editCurrentPhone.getText().toString(),
-                                editPreLanName.getText().toString(),
-                                editPreLandPhone.getText().toString());
+            helper.insertContact(c);
+            Intent in = new Intent(ContinueApply.this, Continue_C.class);
+            startActivity(in);
 
 
-
-                        if(isInserted == true){
-                            Toast.makeText(ContinueApply.this,"Please continue", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(ContinueApply.this, Continue_C.class);
-                            startActivity(intent);
-
-
-                        }
-
-                        else
-                            Toast.makeText(ContinueApply.this,"Please Enter Information", Toast.LENGTH_LONG).show();
-
-                    }
-                }
-        );
     }
-     */
 }
-
-
-
-
-
-
-

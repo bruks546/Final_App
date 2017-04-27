@@ -3,14 +3,10 @@ package com.example.edwingariza.franssenpropertiesinc;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
+
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.BaseColumns;
 
-import java.security.AccessControlContext;
-
-import static java.security.AccessController.getContext;
 
 /**
  * Created by edwingariza on 4/11/17.
@@ -117,7 +113,9 @@ import static java.security.AccessController.getContext;
         SQLiteDatabase db;
 
 
-        private static final String CREATE_APP_TABLE = "CREATE TABLE " + TABLE_APP_A + " (" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
+        private static final String CREATE_APP_TABLE =
+                "CREATE TABLE " + TABLE_APP_A + " (" +
+                        KEY_ID + " INTEGER PRIMARY KEY NOT NULL, "
                 + NAME_AP + " TEXT, "
                 + ADD_AP + " TEXT, "
                 + CITY_AP + " TEXT, "
@@ -133,7 +131,7 @@ import static java.security.AccessController.getContext;
                 + ADDRESS_REL_2 + " TEXT, "
                 + RELATIVE_PHONE_2 + " TEXT, "
                 + PREVIEWS_PROPERTY_NAME + " TEXT, "
-                + PREVIEWS_PROPERTY_NUMBER + " TEXT;)";
+                + PREVIEWS_PROPERTY_NUMBER + " TEXT);";
                 /**
                 + UNDER_NAME + " TEXT,"
                 + WHEN + " TEXT,"
@@ -202,8 +200,8 @@ import static java.security.AccessController.getContext;
             String query = "select * from Application_A";
             Cursor cur = db.rawQuery(query, null);
             int count = cur.getCount();
-            values.put(KEY_ID, count);
 
+            values.put(KEY_ID, count);
             values.put(NAME_AP, a.getName());
             values.put(ADD_AP, a.getAddress());
             values.put(CITY_AP, a.getCity());
@@ -277,7 +275,7 @@ import static java.security.AccessController.getContext;
 
 
 
-            db.insert(CREATE_APP_TABLE, null, values);
+            db.insert(TABLE_APP_A, null, values);
             db.close();
         }
 
@@ -285,7 +283,7 @@ import static java.security.AccessController.getContext;
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-            String query = "DROP TABLE IF EXISTS" + CREATE_APP_TABLE;
+            String query = "DROP TABLE IF EXISTS" + TABLE_APP_A;
 
             db.execSQL(query);
 

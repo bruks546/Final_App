@@ -20,31 +20,14 @@ public class Application extends AppCompatActivity {
 
     }
 
-   public void NameContinue(){
-
-
-        EditText rqname = (EditText)findViewById(R.id.name_Text);
-        String namestr = rqname.getText().toString();
-
-
-
-        Intent in = new Intent(Application.this, ContinueApply.class);
-        in.putExtra("Name", namestr);
-
-
-        startActivity(in);
-        Toast.makeText(Application.this, "Thanks "+namestr+" we will attent your " + in + "issue ASAP", Toast.LENGTH_LONG).show();
-
-    }
 
    public void ContinueAppBtn(View v)
     {
-        if(v.getId() == R.id.continue_button) {
-            Toast.makeText(Application.this, "Thanks ", Toast.LENGTH_LONG).show();
-            Intent in = new Intent(Application.this, ContinueApply.class);
-            startActivity(in);
 
-/**
+
+
+
+
             EditText name = (EditText) findViewById(R.id.name_Text);
             EditText add = (EditText) findViewById(R.id.address_Text);
             EditText city = (EditText) findViewById(R.id.city_Text);
@@ -52,7 +35,7 @@ public class Application extends AppCompatActivity {
             EditText zip = (EditText) findViewById(R.id.zip_Text);
             EditText telephone = (EditText) findViewById(R.id.phone_Text);
             EditText rel_name = (EditText) findViewById(R.id.rel_name_1);
-            EditText relation_1 = (EditText) findViewById(R.id.relation_rel_1);
+            EditText relation_1 = (EditText) findViewById(R.id.relation_Text);
             EditText address_rel_1 = (EditText) findViewById(R.id.address_rel_1);
             EditText phone_rel_1= (EditText) findViewById(R.id.phone_rel_1);
             EditText rel_name_2 = (EditText) findViewById(R.id.name_rel_2);
@@ -100,18 +83,20 @@ public class Application extends AppCompatActivity {
 
 
 
+
+
+
             helper.insertApplicant(r);
- */
+        Intent in = new Intent(Application.this, ContinueApply.class);
+        Intent n = new Intent(Application.this, ContinueFinal.class);
+        n.putExtra("Name", namestr);
+        startActivity(in);
 
-            //NameContinue();
-
-
-
-
-        }
 
 
     }
+
+
 
 
 }

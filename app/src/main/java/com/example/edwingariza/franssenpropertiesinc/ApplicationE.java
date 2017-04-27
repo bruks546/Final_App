@@ -9,17 +9,36 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class ApplicationE extends AppCompatActivity {
-    DbHandler dbHelper;
-    EditText editBankCheck, editBankSave, editPropVal,
-            editMarketVal, editMake, editModel, editLicense, editYear;
-    Button btnContinue;
+    DatabaseE helper = new DatabaseE(this);
+
+    EditText editBankCheck,
+            editBankSave,
+            editPropVal,
+            editMarketVal,
+            editMake,
+            editModel,
+            editLicense,
+            editYear;
+    String BankCheck,
+           BankSave,
+           PropVal,
+           MarketVal,
+           Make,
+           Model,
+           License,
+            Year;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_application_e);
-        dbHelper = new DbHandler(this);
 
+
+    }
+
+    public void ContinueAppFinal(View v)
+    {
 
         editBankCheck = (EditText) findViewById(R.id.check_bank);
         editBankSave = (EditText) findViewById(R.id.saving_bank);
@@ -30,44 +49,35 @@ public class ApplicationE extends AppCompatActivity {
         editLicense = (EditText) findViewById(R.id.license_text);
         editYear = (EditText) findViewById(R.id.year_text);
 
-        btnContinue = (Button) findViewById(R.id.continue_final);
-       // AddData();
+        BankCheck = editBankCheck.getText().toString();
+        BankSave = editBankSave.getText().toString();
+        PropVal = editPropVal.getText().toString();
+        MarketVal = editMarketVal.getText().toString();
+        Make = editMake.getText().toString();
+        Model = editModel.getText().toString();
+        License = editLicense.getText().toString();
+        Year = editYear.getText().toString();
+
+
+        AppGetSetE r = new AppGetSetE();
+
+        r.setBank_name_checking(BankCheck);
+        r.setBank_name_saving(BankSave);
+        r.setProperty_val(PropVal);
+        r.setMarket_val_dis(MarketVal);
+        r.setVehicle_made(Make);
+        r.setVehicle_model(Model);
+        r.setVehicle_license(License);
+        r.setVehicle_year(Year);
+
+
+
+        helper.insertApplicantE(r);
+        Intent in = new Intent(ApplicationE.this, ContinueFinal.class);
+        startActivity(in);
+
 
     }
-/**
 
-    public void AddData() {
-        btnContinue.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        boolean isInserted = dbHelper.insertE(
-
-                                editBankCheck.getText().toString(),
-                                editBankSave.getText().toString(),
-                                editPropVal.getText().toString(),
-                                editMarketVal.getText().toString(),
-                                editMake.getText().toString(),
-                                editModel.getText().toString(),
-                                editLicense.getText().toString(),
-                                editYear.getText().toString());
-
-
-                        if(isInserted == true){
-                            Toast.makeText(ApplicationE.this,"Please continue", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(ApplicationE.this, ContinueFinal.class);
-                            startActivity(intent);
-
-
-                        }
-
-                        else
-                            Toast.makeText(ApplicationE.this,"Please Enter Information", Toast.LENGTH_LONG).show();
-
-                    }
-                }
-        );
-    }
- */
     }
 

@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class ServiceRequest extends AppCompatActivity {
-    DatabaseHelperRequest helper = new DatabaseHelperRequest(this);
+    DatabaseHelper helper = new DatabaseHelper(this);
 
 
     @Override
@@ -40,7 +40,7 @@ public class ServiceRequest extends AppCompatActivity {
     }
     public void onCreateRequest(View v)
     {
-        if(v.getId() == R.id.ser_re_btn){
+
 
             EditText CATEGORY = (EditText) findViewById(R.id.category_text);
             EditText ISSUE = (EditText) findViewById(R.id.issue_text);
@@ -67,7 +67,7 @@ public class ServiceRequest extends AppCompatActivity {
             IssueUnit();
 
 
-        }
+
 
 
     }

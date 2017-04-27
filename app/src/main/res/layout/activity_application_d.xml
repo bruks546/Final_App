@@ -191,6 +191,7 @@
             android:layout_below="@+id/income_source_3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="29dp"
+            android:onClick="ContinueAppE"
             android:text="@string/continue_btn" />
 
     </RelativeLayout>

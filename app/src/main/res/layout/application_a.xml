@@ -4,360 +4,390 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"> 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView12"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp"
+            android:text="@string/application_str"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold|italic" />
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView22"
+            android:layout_alignStart="@+id/textView22"
+            android:layout_below="@+id/textView14"
+            android:layout_marginLeft="10dp"
+            android:text="@string/a_appli_str" />
+
+        <EditText
+            android:id="@+id/name_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/date_Text"
+            android:layout_alignStart="@+id/date_Text"
+            android:layout_below="@+id/date_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="@string/name_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/date_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView15"
+            android:layout_alignStart="@+id/textView15"
+            android:layout_below="@+id/textView15"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="@string/date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/address_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name_Text"
+            android:layout_alignStart="@+id/name_Text"
+            android:layout_below="@+id/name_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:ems="10"
+            android:hint="@string/address_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/city_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/address_Text"
+            android:layout_alignStart="@+id/address_Text"
+            android:layout_below="@+id/address_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="@string/city_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/state_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/city_Text"
+            android:layout_alignStart="@+id/city_Text"
+            android:layout_below="@+id/city_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:hint="@string/state_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/zip_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/state_Text"
+            android:layout_alignStart="@+id/state_Text"
+            android:layout_below="@+id/state_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:ems="10"
+            android:hint="@string/zip_str"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/phone_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/zip_Text"
+            android:layout_alignStart="@+id/zip_Text"
+            android:layout_below="@+id/zip_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:hint="@string/phone_str"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/address_rel_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relation_Text"
+            android:layout_alignStart="@+id/relation_Text"
+            android:layout_below="@+id/relation_Text"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/address_str"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_Text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/gridLayout"
+            android:layout_toRightOf="@+id/gridLayout"
+            android:text="@string/student_radio"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView27"
+            android:layout_alignLeft="@+id/apply_C_Btn"
+            android:layout_alignRight="@+id/textView27"
+            android:layout_alignStart="@+id/apply_C_Btn"
+            android:layout_alignTop="@+id/textView22"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/yes_stud"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView12"
-                android:layout_centerHorizontal="true"
-                android:paddingBottom="20dp"
-                android:paddingTop="30dp"
-                android:text="@string/application_str"
-                android:textAlignment="center"
-                android:textSize="28sp"
-                android:textStyle="bold|italic" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView22"
-                android:layout_alignStart="@+id/textView22"
-                android:layout_below="@+id/textView14"
-                android:text="@string/a_appli_str" />
-
-            <EditText
-                android:id="@+id/name_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/date_Text"
-                android:layout_alignStart="@+id/date_Text"
-                android:layout_below="@+id/date_Text"
-                android:layout_marginTop="12dp"
-                android:ems="10"
-                android:hint="@string/name_str"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/date_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView15"
-                android:layout_alignStart="@+id/textView15"
-                android:layout_below="@+id/textView15"
-                android:layout_marginTop="12dp"
-                android:ems="10"
-                android:inputType="date"
-                android:text="@string/date" />
-
-            <EditText
-                android:id="@+id/address_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/name_Text"
-                android:layout_alignStart="@+id/name_Text"
-                android:layout_below="@+id/name_Text"
-                android:layout_marginTop="13dp"
-                android:ems="10"
-                android:hint="@string/address_str"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/city_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/address_Text"
-                android:layout_alignStart="@+id/address_Text"
-                android:layout_below="@+id/address_Text"
-                android:layout_marginTop="15dp"
-                android:ems="10"
-                android:hint="@string/city_str"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/state_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/city_Text"
-                android:layout_alignStart="@+id/city_Text"
-                android:layout_below="@+id/city_Text"
-                android:layout_marginTop="17dp"
-                android:ems="10"
-                android:hint="@string/state_str"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/zip_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/state_Text"
-                android:layout_alignStart="@+id/state_Text"
-                android:layout_below="@+id/state_Text"
-                android:layout_marginTop="13dp"
-                android:ems="10"
-                android:hint="@string/zip_str"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/phone_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/zip_Text"
-                android:layout_alignStart="@+id/zip_Text"
-                android:layout_below="@+id/zip_Text"
-                android:layout_marginTop="11dp"
-                android:ems="10"
-                android:hint="@string/phone_str"
-                android:inputType="phone" />
-
-            <EditText
-                android:id="@+id/address_rel_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/relation_Text"
-                android:layout_alignStart="@+id/relation_Text"
-                android:layout_below="@+id/relation_Text"
-                android:ems="10"
-                android:hint="@string/address_str"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/phone_Text"
+                android:layout_alignLeft="@+id/textView14"
+                android:layout_alignStart="@+id/textView14"
+                android:layout_alignTop="@+id/textView22"
                 android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/gridLayout"
-                android:layout_toRightOf="@+id/gridLayout"
-                android:text="@string/student_radio"
-                android:textSize="24sp" />
+                android:text="@string/yes_radio" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/textView27"
-                android:layout_alignLeft="@+id/apply_C_Btn"
-                android:layout_alignRight="@+id/textView27"
-                android:layout_alignStart="@+id/apply_C_Btn"
-                android:layout_alignTop="@+id/textView22">
-
-                <RadioButton
-                    android:id="@+id/yes_stud"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/textView14"
-                    android:layout_alignStart="@+id/textView14"
-                    android:layout_alignTop="@+id/textView22"
-                    android:text="@string/yes_radio" />
-
-                <RadioButton
-                    android:id="@+id/no_stud"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/yes_stud"
-                    android:layout_toEndOf="@+id/address_rel_1"
-                    android:layout_toRightOf="@+id/address_rel_1"
-                    android:text="@string/no_radio" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/rel_name_1"
-                android:layout_alignStart="@+id/rel_name_1"
-                android:layout_below="@+id/radioGroup"
-                android:layout_marginTop="27dp"
-                android:text="@string/relative_title_str"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/rel_name_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView22"
-                android:layout_alignStart="@+id/textView22"
-                android:layout_below="@+id/textView23"
-                android:ems="10"
-                android:hint="@string/rel_name_str"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/relation_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/rel_name_1"
-                android:layout_alignStart="@+id/rel_name_1"
-                android:layout_below="@+id/rel_name_1"
-                android:ems="10"
-                android:hint="@string/rel_relation_str"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/phone_rel_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/address_rel_1"
-                android:layout_alignStart="@+id/address_rel_1"
-                android:layout_below="@+id/address_rel_1"
-                android:ems="10"
-                android:hint="@string/phone_str"
-                android:inputType="phone" />
-
-            <EditText
-                android:id="@+id/name_rel_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/phone_rel_1"
-                android:layout_alignStart="@+id/phone_rel_1"
-                android:layout_below="@+id/textView24"
-                android:ems="10"
-                android:hint="@string/name_str"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/hud_yes"
-                android:layout_alignStart="@+id/hud_yes"
-                android:layout_below="@+id/phone_rel_1"
-                android:layout_marginTop="12dp"
-                android:text="@string/relative_2_title"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/relation_relation_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/name_rel_2"
-                android:layout_alignStart="@+id/name_rel_2"
-                android:layout_below="@+id/name_rel_2"
-                android:ems="10"
-                android:hint="@string/rel_relation_str"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/address_rel_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/address_str"
-                android:inputType="textPersonName"
-                android:layout_below="@+id/relation_relation_2"
-                android:layout_alignLeft="@+id/relation_relation_2"
-                android:layout_alignStart="@+id/relation_relation_2" />
-
-            <EditText
-                android:id="@+id/phone_rel_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/address_rel_2"
-                android:layout_alignStart="@+id/address_rel_2"
-                android:layout_below="@+id/address_rel_2"
-                android:ems="10"
-                android:hint="@string/phone_str"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/question_str"
-                android:textSize="18sp"
-                android:layout_marginTop="144dp"
-                android:layout_below="@+id/relation_relation_2"
-                android:layout_alignLeft="@+id/relation_relation_2"
-                android:layout_alignStart="@+id/relation_relation_2" />
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/if_yes_str"
-                android:textSize="18sp"
-                android:layout_below="@+id/hud_Radio_group"
-                android:layout_centerHorizontal="true" />
-
-            <EditText
-                android:id="@+id/property_name_text"
+            <RadioButton
+                android:id="@+id/no_stud"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/name_str"
-                android:inputType="textPersonName"
-                android:layout_below="@+id/hud_Radio_group"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="36dp" />
+                android:layout_alignTop="@+id/yes_stud"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/address_rel_1"
+                android:layout_toRightOf="@+id/address_rel_1"
+                android:text="@string/no_radio" />
+        </RadioGroup>
 
-            <EditText
-                android:id="@+id/property_phone_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/property_number"
-                android:inputType="phone"
-                android:layout_marginTop="24dp"
-                android:layout_below="@+id/property_name_text"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rel_name_1"
+            android:layout_alignStart="@+id/rel_name_1"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="27dp"
+            android:text="@string/relative_title_str"
+            android:textSize="14sp" />
 
-            <RadioGroup
-                android:id="@+id/hud_Radio_group"
+        <EditText
+            android:id="@+id/rel_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView22"
+            android:layout_alignStart="@+id/textView22"
+            android:layout_below="@+id/textView23"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/rel_name_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/relation_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rel_name_1"
+            android:layout_alignStart="@+id/rel_name_1"
+            android:layout_below="@+id/rel_name_1"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/rel_relation_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/phone_rel_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/address_rel_1"
+            android:layout_alignStart="@+id/address_rel_1"
+            android:layout_below="@+id/address_rel_1"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/phone_str"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hud_yes"
+            android:layout_alignStart="@+id/hud_yes"
+            android:layout_below="@+id/phone_rel_1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/relative_2_title"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/name_rel_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/phone_rel_1"
+            android:layout_alignStart="@+id/phone_rel_1"
+            android:layout_below="@+id/textView24"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/name_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/relation_relation_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name_rel_2"
+            android:layout_alignStart="@+id/name_rel_2"
+            android:layout_below="@+id/name_rel_2"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/rel_relation_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/address_rel_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relation_relation_2"
+            android:layout_alignStart="@+id/relation_relation_2"
+            android:layout_below="@+id/relation_relation_2"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/address_str"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/phone_rel_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/address_rel_2"
+            android:layout_alignStart="@+id/address_rel_2"
+            android:layout_below="@+id/address_rel_2"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="@string/phone_str"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relation_relation_2"
+            android:layout_alignStart="@+id/relation_relation_2"
+            android:layout_below="@+id/relation_relation_2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="144dp"
+            android:text="@string/question_str"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hud_Radio_group"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/if_yes_str"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/hud_Radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView26"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:fadingEdge="horizontal"
+            android:requiresFadingEdge="horizontal">
+
+            <RadioButton
+                android:id="@+id/hud_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/hud_yes"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/textView24"
+                android:layout_toRightOf="@+id/textView24"
+                android:layout_weight="1"
+                android:text="@string/no_radio" />
+
+            <RadioButton
+                android:id="@+id/hud_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/yes_stud"
+                android:layout_alignRight="@+id/yes_stud"
                 android:layout_below="@+id/textView26"
-                android:layout_marginTop="17dp"
-                android:fadingEdge="horizontal"
-                android:requiresFadingEdge="horizontal">
+                android:layout_marginEnd="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:layoutDirection="inherit"
+                android:text="@string/yes_radio" />
+        </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/hud_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/hud_yes"
-                    android:layout_toEndOf="@+id/textView24"
-                    android:layout_toRightOf="@+id/textView24"
-                    android:layout_weight="1"
-                    android:text="@string/no_radio" />
+        <EditText
+            android:id="@+id/property_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/hud_Radio_group"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="@string/name_str"
+            android:inputType="textPersonName" />
 
-                <RadioButton
-                    android:id="@+id/hud_yes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/yes_stud"
-                    android:layout_alignRight="@+id/yes_stud"
-                    android:layout_below="@+id/textView26"
-                    android:layout_marginEnd="14dp"
-                    android:layout_marginRight="14dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_weight="1"
-                    android:layoutDirection="inherit"
-                    android:text="@string/yes_radio" />
-            </RadioGroup>
+        <EditText
+            android:id="@+id/property_phone_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/property_name_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="@string/property_number"
+            android:inputType="phone" />
 
-    <Button
-        android:id="@+id/continue_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/property_phone_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:onClick="ContinueAppBtn"
-        android:text="@string/continue_btn"
-        tools:onClick="ContinueAppBtn" />
+        <Button
+            android:id="@+id/continue_button_to_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/property_phone_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="46dp"
+            android:onClick="ContinueAppBtn"
+            android:text="@string/continue_btn"
+            tools:onClick="ContinueAppBtn" />
 
-</LinearLayout>
+    </LinearLayout>
     </ScrollView>
 
 

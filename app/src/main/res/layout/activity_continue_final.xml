@@ -156,6 +156,7 @@
             android:layout_below="@+id/radioGroup8"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+            android:onClick="ContinueAppDone"
             android:text="@string/submit_btn_str" />
 
     </RelativeLayout>
