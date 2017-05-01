@@ -23,14 +23,6 @@ public class Tenant extends AppCompatActivity {
         TextView tv = (TextView)findViewById(R.id.tenant_name);
         tv.setText(username);
 
-
-       // String UnitDis = getIntent().getStringExtra("Unit");
-
-
-        //TextView unitTv = (TextView)findViewById(R.id.unit_user);
-        //unitTv.setText(UnitDis);
-
-
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
@@ -38,19 +30,16 @@ public class Tenant extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.actions, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.my_account) {
 
             TenantOpt();
@@ -92,10 +81,22 @@ public class Tenant extends AppCompatActivity {
 
             return true;
         }
+        else if (id == R.id.home) {
+
+            HomeBtn();
+
+            return true;
+        }
+
 
 
         return super.onOptionsItemSelected(item);
     }
+    public void HomeBtn(){
+        Intent in = new Intent(this, MainActivity.class);
+        startActivity(in);
+    }
+
 
     public void FeedB(){
         Intent intent = new Intent(this, Feedback.class);

@@ -18,10 +18,6 @@ public class ContinueFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_continue_final);
-        String name = getIntent().getStringExtra("Name");
-
-        Toast.makeText(ContinueFinal.this, "The last Page " + name, Toast.LENGTH_SHORT).show();
-
 
     }
 
@@ -36,6 +32,7 @@ public class ContinueFinal extends AppCompatActivity {
 
         helper.insertApplicantFinal(r);
         Intent in = new Intent(ContinueFinal.this, LogIn.class);
+        Toast.makeText(ContinueFinal.this, "Thank you for applying with us", Toast.LENGTH_SHORT).show();
 
         startActivity(in);
     }

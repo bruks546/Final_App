@@ -6,30 +6,21 @@
     android:layout_height="match_parent">
 
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
 
-
-        <GridLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="382dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/gridLayout2"
-            tools:targetApi="ice_cream_sandwich">
+            android:text="@string/present_house"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="382dp"
-                android:layout_height="wrap_content"
-                android:text="@string/present_house"
-                android:textAlignment="center"
-                android:textSize="18sp" />
-        </GridLayout>
 
         <TextView
             android:id="@+id/textView7"
@@ -43,58 +34,40 @@
             android:textSize="18sp" />
 
         <RadioGroup
-            android:id="@+id/haveRadioGroup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/gridLayout2"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView7"
-            android:foregroundGravity="left"
-            android:gravity="left"
-            android:textAlignment="center">
-
-            <RadioButton
-                android:id="@+id/have_no"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView10"
-                android:layout_marginLeft="26dp"
-                android:layout_marginStart="26dp"
-                android:layout_toEndOf="@+id/textView10"
-                android:layout_toRightOf="@+id/textView10"
-                android:layout_weight="0.11"
-                android:text="@string/no_radio" />
+            android:layout_height="match_parent">
 
             <RadioButton
                 android:id="@+id/have_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView10"
-                android:layout_below="@+id/textView7"
-                android:layout_marginLeft="39dp"
-                android:layout_marginStart="39dp"
+                android:layout_weight="1"
                 android:text="@string/yes_radio" />
+
+            <RadioButton
+                android:id="@+id/have_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/no_radio" />
         </RadioGroup>
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/under_name"
-            android:textSize="18sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/haveRadioGroup"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_below="@+id/haveRadioGroup"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_marginTop="10dp"
+            android:text="@string/under_name"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/name_have"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView10"
             android:layout_alignStart="@+id/textView10"
@@ -102,20 +75,6 @@
             android:ems="10"
             android:hint="@string/name_str"
             android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/when_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/date"
-            android:inputType="date"
-            android:layout_alignBaseline="@+id/textView19"
-            android:layout_alignBottom="@+id/textView19"
-            android:layout_alignRight="@+id/gridLayout2"
-            android:layout_alignEnd="@+id/gridLayout2"
-            android:layout_marginRight="35dp"
-            android:layout_marginEnd="35dp" />
 
         <TextView
             android:id="@+id/textView19"
@@ -126,7 +85,21 @@
             android:layout_below="@+id/name_have"
             android:layout_marginTop="21dp"
             android:text="@string/when"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/when_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView19"
+            android:layout_alignBottom="@+id/textView19"
+            android:layout_alignEnd="@+id/gridLayout2"
+            android:layout_alignRight="@+id/gridLayout2"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:ems="10"
+            android:hint="@string/date"
+            android:inputType="date" />
 
         <TextView
             android:id="@+id/textView20"
@@ -142,7 +115,7 @@
 
         <EditText
             android:id="@+id/landlord_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView20"
             android:layout_alignStart="@+id/textView20"
@@ -154,7 +127,7 @@
 
         <EditText
             android:id="@+id/land_phone"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/landlord_name"
             android:layout_alignStart="@+id/landlord_name"
@@ -180,7 +153,7 @@
 
         <EditText
             android:id="@+id/prev_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/land_phone"
             android:layout_alignRight="@+id/land_phone"
@@ -192,7 +165,7 @@
 
         <EditText
             android:id="@+id/prev_phone"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/prev_name"
             android:layout_alignStart="@+id/prev_name"
@@ -208,10 +181,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/prev_phone"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
 
+            android:layout_marginTop="13dp"
             android:onClick="onClickContinueC"
             android:text="@string/continue_btn" />
 
-    </RelativeLayout>
+    </LinearLayout>
 </ScrollView>

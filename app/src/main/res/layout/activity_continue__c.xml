@@ -18,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:text="@string/c_title_strt"
             android:textAlignment="center"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold|italic" />
 
         <EditText
@@ -54,7 +54,8 @@
             android:layout_alignStart="@+id/name_relative_1"
             android:layout_below="@+id/textView34"
             android:layout_marginTop="13dp"
-            android:text="@string/Uno" />
+            android:text="@string/Uno"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/age_rel_1"
@@ -114,7 +115,8 @@
             android:layout_alignStart="@+id/social_rel_1"
             android:layout_below="@+id/social_rel_1"
             android:layout_marginTop="15dp"
-            android:text="2." />
+            android:text="2."
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/name_relative_2"
@@ -184,7 +186,8 @@
             android:layout_alignStart="@+id/social_rel_2"
             android:layout_below="@+id/social_rel_2"
             android:layout_marginTop="15dp"
-            android:text="3." />
+            android:text="3."
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/name_relative_3"
@@ -253,7 +256,8 @@
             android:layout_alignStart="@+id/social_rel_3"
             android:layout_below="@+id/social_rel_3"
             android:layout_marginTop="20dp"
-            android:text="4." />
+            android:text="4."
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/name_relative_4"

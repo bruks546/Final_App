@@ -24,19 +24,14 @@ public class About extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.actions, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.my_account) {
 
             TenantOpt();
@@ -78,6 +73,12 @@ public class About extends AppCompatActivity {
 
             return true;
         }
+        else if (id == R.id.home) {
+
+            HomeBtn();
+
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);
@@ -99,9 +100,6 @@ public class About extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
-
     public void ApplyInt(){
         Intent intent = new Intent(this, Application.class);
 
@@ -119,14 +117,10 @@ public class About extends AppCompatActivity {
 
         startActivity(intent);
     }
-
-
-
-
-    public void showPopup(View v){
-        PopupMenu popup = new PopupMenu(this, v);
-        MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.actions, popup.getMenu());
-        popup.show();
+    public void HomeBtn(){
+        Intent in = new Intent(this, MainActivity.class);
+        startActivity(in);
     }
+
+
 }

@@ -19,7 +19,7 @@
     <string name="student_radio">Estudiante: </string>
     <string name="yes_radio">Si</string>
     <string name="no_radio">No</string>
-    <string name="relative_title_str">Nombre, Dirección, y telefono de Relativo o Familiar/string</string>
+    <string name="relative_title_str">Nombre, Dirección, y telefono de Relativo o Familiar</string>
     <string name="rel_name_str">Nombre </string>
     <string name="rel_relation_str">Relación </string>
     <string name="title_activity_log_in">Registrarse</string>
@@ -63,7 +63,7 @@
     <string name="head_str">Ofina Principal</string>
     <string name="head_info_str">380 Mapple St. 322322 \n 56789056 \n tiffany@gmail.com</string>
 
-    <string name="present_house">B. Estado Actual de Vivienda/</string>
+    <string name="present_house">B. Estado Actual de Vivienda</string>
     <string name="have_hud_str">Has aplicado con nosotros antes?</string>
     <string name="under_name">Si es así, con que nombre: </string>
     <string name="when">Cuando :</string>
@@ -115,4 +115,44 @@
     <string name="thanks">Graciar por aplicar con \n Franssen Properties, Inc.</string>
 
     <string name="select_proper">Seleccione un Complejo!</string>
+
+
+    <string name="title_activity_menu">Menu</string>
+
+    <!-- Strings for Menu -->
+    <string name="my_account">Mi Cuenta</string>
+    <string name="favorites">Favoritos</string>
+    <string name="rent_calculator">Calculador de Renta</string>
+    <string name="apply">Aplicar</string>
+    <string name="contact_us">Contactenos</string>
+    <string name="about">Acerca de Nosotros</string>
+    <string name="feedback">Retroalimentacion</string>
+    <string name="action_settings">Configuracion</string>
+
+
+    <!-- Rent Calculator -->
+
+    <string name="rent_estimator">Calculador de Renta</string>
+    <string name="rent_limit">Limites de Ingresos</string>
+
+    <string name="about_us">Acerca de Nosotros</string>
+    <string name="about_str">Todos necesitan un lugar para vivir. \n Franssen Properties fue fundado en 2003.
+        \nDesde el primero momento del portafolio hasta ahora, \n Franssen Properties se esfuerza por la gran satisfacion de nuestros arrendatarios
+        \nposiblemebte de acuerdo a nuestras politicas y bajo los contratos de los cuales operamos. \n \n Oportunidad igualitaria de vivienda.</string>
+
+    <string name="feedback_title">Agradecemos sus comentarios</string>
+    <string name="feedback_enter">Entre su comentaraio aca...</string>
+
+    <string name="send">Send</string>
+
+    <string name="advise">Recuerde apagar la estufa. \nSi escucha agua corriendo, llame el numero de mantenimiento \no ingrese una Orden de Servicio.</string>
+    <string name="news">Primavera esta aca y es hora de empezar a realizar una limpieza de de primavera \nDurante las dos primeras
+        \nde Mayo puedes tomar tu objetos al botadero
+        \nubicado al sur parte del complejo destinado para esta limpieza. </string>
+
+    <string name="enter_service_request">Por favor ingrese la sigiente informacion: </string>
+    <string name="contact_inf">Informacion de contacto</string>
+    <string name="call_now"> Llame ahora!</string>
+
+
 </resources>

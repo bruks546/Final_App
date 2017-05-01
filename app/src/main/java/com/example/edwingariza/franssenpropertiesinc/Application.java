@@ -12,6 +12,8 @@ public class Application extends AppCompatActivity {
     DbHandler helper = new DbHandler(this);
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,7 @@ public class Application extends AppCompatActivity {
             EditText address_rel_1 = (EditText) findViewById(R.id.address_rel_1);
             EditText phone_rel_1= (EditText) findViewById(R.id.phone_rel_1);
             EditText rel_name_2 = (EditText) findViewById(R.id.name_rel_2);
-            EditText rellation_2 = (EditText) findViewById(R.id.relation_relation_2);
+            EditText relation_2 = (EditText) findViewById(R.id.relation_relation_2);
             EditText add_rel_2 = (EditText) findViewById(R.id.address_rel_2);
             EditText phone_rel_2 = (EditText) findViewById(R.id.phone_rel_2);
             EditText previews_name= (EditText) findViewById(R.id.property_name_text);
@@ -56,11 +58,14 @@ public class Application extends AppCompatActivity {
             String add_relstr = address_rel_1.getText().toString();
             String phone_relstr = phone_rel_1.getText().toString();
             String rel_namestr = rel_name_2.getText().toString();
-            String rell2str = rellation_2.getText().toString();
+            String rell2str = relation_2.getText().toString();
             String add_relstr2 = add_rel_2.getText().toString();
             String phone_rel2 = phone_rel_2.getText().toString();
             String previewsnamestr = previews_name.getText().toString();
             String previews_phonestr = previews_phone.getText().toString();
+
+        if(!(namestr.equals(""))) {
+
 
             ApplicationGetSet r = new ApplicationGetSet();
 
@@ -82,15 +87,18 @@ public class Application extends AppCompatActivity {
             r.setPreviews_number(previews_phonestr);
 
 
-
-
-
-
             helper.insertApplicant(r);
-        Intent in = new Intent(Application.this, ContinueApply.class);
-        Intent n = new Intent(Application.this, ContinueFinal.class);
-        n.putExtra("Name", namestr);
-        startActivity(in);
+            Intent in = new Intent(Application.this, ContinueApply.class);
+            Intent n = new Intent(Application.this, ApplicationE.class);
+            n.putExtra("Name", namestr);
+            Toast.makeText(Application.this, "Thank you for applying with us " + namestr, Toast.LENGTH_LONG).show();
+            startActivity(in);
+
+        }
+        else{
+            Toast.makeText(Application.this, "Missing Name", Toast.LENGTH_LONG).show();
+
+        }
 
 
 

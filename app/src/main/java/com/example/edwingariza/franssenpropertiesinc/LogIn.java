@@ -78,12 +78,9 @@ public class LogIn extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.my_account) {
 
             TenantOpt();
@@ -125,9 +122,19 @@ public class LogIn extends AppCompatActivity {
 
             return true;
         }
+        else if (id == R.id.home) {
+
+            HomeBtn();
+
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);
+    }
+    public void HomeBtn(){
+        Intent in = new Intent(this, MainActivity.class);
+        startActivity(in);
     }
 
     public void FeedB(){
@@ -165,19 +172,4 @@ public class LogIn extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
-
-    public void showPopup(View v){
-        PopupMenu popup = new PopupMenu(this, v);
-        MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.actions, popup.getMenu());
-        popup.show();
-    }
-
-    public void LogInBtn(View view){
-        Intent intent = new Intent(this, Tenant.class);
-
-        startActivity(intent);
-    }
 }

@@ -78,77 +78,69 @@ public class Continue_C extends AppCompatActivity {
         HouseAge3 = editHouseAge3.getText().toString();
         HouseSsn3= editHouseSsn3.getText().toString();
 
-                NameHouse4 =editNameHouse4.getText().toString();
+        NameHouse4 =editNameHouse4.getText().toString();
         HouseRel4 =editHouseRel4.getText().toString();
         HouseBirth4=editHouseBirth4.getText().toString();
         HouseAge4=editHouseAge4.getText().toString();
         HouseSsn4=editHouseSsn4.getText().toString();
-                HouseHandy=editHouseHandy.getText().toString();
+        HouseHandy=editHouseHandy.getText().toString();
+
+        if(!(NameHouse1.equals(""))) {
+
+            if (!(HouseBirth1.equals(""))) {
 
 
-        AppCGetSet r = new AppCGetSet();
-        r.setHousehold_name_1(NameHouse1);
-        r.setHousehold_relationship_1(HouseRel1);
-        r.setHousehold_birth_name_1(HouseBirth1);
-        r.setHousehold_age_1(HouseAge1);
-        r.setHousehold_ssn_1(HouseSsn1);
-        r.setHousehold_name_2(NameHouse2);
-        r.setHousehold_relationship_2(HouseRel2);
-        r.setHousehold_birth_name_2(HouseBirth2);
-        r.setHousehold_age_2(HouseAge2);
-        r.setHousehold_ssn_2(HouseSsn2);
-        r.setHousehold_birth_name_3(NameHouse3);
-        r.setHousehold_relationship_3(HouseRel3);
-        r.setHousehold_birth_name_3(HouseBirth3);
-        r.setHousehold_age_3(HouseAge3);
-        r.setHousehold_ssn_3(HouseSsn3);
-        r.setHousehold_name_4(NameHouse4);
-        r.setHousehold_relationship_4(HouseRel4);
-        r.setHousehold_birth_name_4(HouseBirth4);
-        r.setHousehold_age_4(HouseAge4);
-        r.setHousehold_ssn_4(HouseSsn4);
-        r.setHousehold_handy(HouseHandy);
-
-        helper.insertApplicantC(r);
-        Intent in = new Intent(Continue_C.this, ApplicationD.class);
-        startActivity(in);
+                if (!(HouseAge1.equals(""))) {
 
 
-
-    }
-    /**
+                    if (!(HouseSsn1.equals(""))) {
 
 
-    public void AddData() {
-        btnContinue.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        boolean isInserted = dbHelper.insertC(
-         editNameHouse1.getText().toString(), editHouseRel1.getText().toString(), editHouseBirth1.getText().toString(), editHouseAge1.getText().toString(), editHouseSsn1.getText().toString(),
-         editNameHouse2.getText().toString(), editHouseRel2.getText().toString(), editHouseBirth2.getText().toString(), editHouseAge2.getText().toString(), editHouseSsn2.getText().toString(),
-         editNameHouse3.getText().toString(), editHouseRel3.getText().toString(), editHouseBirth3.getText().toString(), editHouseAge3.getText().toString(), editHouseSsn3.getText().toString(),
-         editNameHouse4.getText().toString(), editHouseRel4.getText().toString(), editHouseBirth4.getText().toString(), editHouseAge4.getText().toString(), editHouseSsn4.getText().toString(),
-                        editHouseHandy.getText().toString());
+                        AppCGetSet r = new AppCGetSet();
+                        r.setHousehold_name_1(NameHouse1);
+                        r.setHousehold_relationship_1(HouseRel1);
+                        r.setHousehold_birth_name_1(HouseBirth1);
+                        r.setHousehold_age_1(HouseAge1);
+                        r.setHousehold_ssn_1(HouseSsn1);
+                        r.setHousehold_name_2(NameHouse2);
+                        r.setHousehold_relationship_2(HouseRel2);
+                        r.setHousehold_birth_name_2(HouseBirth2);
+                        r.setHousehold_age_2(HouseAge2);
+                        r.setHousehold_ssn_2(HouseSsn2);
+                        r.setHousehold_birth_name_3(NameHouse3);
+                        r.setHousehold_relationship_3(HouseRel3);
+                        r.setHousehold_birth_name_3(HouseBirth3);
+                        r.setHousehold_age_3(HouseAge3);
+                        r.setHousehold_ssn_3(HouseSsn3);
+                        r.setHousehold_name_4(NameHouse4);
+                        r.setHousehold_relationship_4(HouseRel4);
+                        r.setHousehold_birth_name_4(HouseBirth4);
+                        r.setHousehold_age_4(HouseAge4);
+                        r.setHousehold_ssn_4(HouseSsn4);
+                        r.setHousehold_handy(HouseHandy);
 
-
-
-                        if(isInserted == true){
-                            Toast.makeText(Continue_C.this,"Please continue", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(Continue_C.this, ApplicationD.class);
-                            startActivity(intent);
-
-
-                        }
-
-                        else
-                            Toast.makeText(Continue_C.this,"Please Enter Information", Toast.LENGTH_LONG).show();
-
+                        helper.insertApplicantC(r);
+                        Intent in = new Intent(Continue_C.this, ApplicationD.class);
+                        startActivity(in);
+                    } else {
+                        Toast.makeText(Continue_C.this, "Please enter your Social Security Number", Toast.LENGTH_LONG).show();
                     }
+                } else {
+                    Toast.makeText(Continue_C.this, "Please enter your Age", Toast.LENGTH_LONG).show();
+
                 }
-        );
+            } else {
+                Toast.makeText(Continue_C.this, "Please enter your Birth Date", Toast.LENGTH_LONG).show();
+
+            }
+        }
+        else{
+            Toast.makeText(Continue_C.this, "Please enter your Name", Toast.LENGTH_LONG).show();
+
+        }
+
     }
-     */
+
     }
 
 

@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1200dp"
-        android:gravity="fill_horizontal">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView43"
@@ -18,19 +20,19 @@
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/textView51"
             android:text="@string/hear_about"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold|italic" />
 
         <EditText
             android:id="@+id/hear_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView43"
-            android:layout_alignStart="@+id/textView43"
+            android:layout_alignLeft="@+id/textView52"
+            android:layout_alignStart="@+id/textView52"
             android:layout_below="@+id/textView43"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textMultiLine" />
 
         <TextView
             android:id="@+id/textView51"
@@ -118,8 +120,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="22dp"
             android:text="@string/agree_str"
-            android:textAlignment="center"
-            android:textSize="16sp"
+            android:textAlignment="gravity"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <RadioGroup
@@ -155,9 +157,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/radioGroup8"
             android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:onClick="ContinueAppDone"
             android:text="@string/submit_btn_str" />
 
-    </RelativeLayout>
+  </LinearLayout>
 </ScrollView>

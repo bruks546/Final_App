@@ -77,9 +77,20 @@ public class Centennial extends AppCompatActivity {
 
             return true;
         }
+        else if (id == R.id.home) {
+
+            HomeBtn();
+
+            return true;
+        }
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void HomeBtn(){
+        Intent in = new Intent(this, MainActivity.class);
+        startActivity(in);
     }
 
     public void FeedB(){

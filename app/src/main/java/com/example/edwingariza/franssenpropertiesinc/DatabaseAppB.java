@@ -28,17 +28,20 @@ public class DatabaseAppB extends SQLiteOpenHelper{
 
     private static final String TABLE_CREATE =
             "CREATE TABLE " + TABLE_NAME + " (" +
-                    _ID + " INTEGER PRIMARY KEY not null, " +
-                    UNDER_NAME + " TEXT not null ," +
-                    WHEN + " TEXT not null, " +
-                    CURRENT_LANDLORD + " TEXT not null, " +
-                    LANDLORD_PHONE + " TEXT not null, " +
-                    PRE_LANDLORD_NAME + " TEXT not null, " +
-                    PRE_LANDLORD_PHONE+ " TEXT not null);";
+                    _ID + " INTEGER PRIMARY KEY not null," +
+                    UNDER_NAME + " TEXT," +
+                    WHEN + " TEXT," +
+                    CURRENT_LANDLORD + " TEXT," +
+                    LANDLORD_PHONE + " TEXT," +
+                    PRE_LANDLORD_NAME + " TEXT," +
+                    PRE_LANDLORD_PHONE+ " TEXT)";
 
     public DatabaseAppB(Context context){
         super(context, DATABASE_NAME, null, DATA_BASE_VERSION);
     }
+
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {

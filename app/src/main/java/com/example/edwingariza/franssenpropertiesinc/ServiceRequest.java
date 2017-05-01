@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class ServiceRequest extends AppCompatActivity {
-    DatabaseHelper helper = new DatabaseHelper(this);
+    DatabaseHelperRequest helper = new DatabaseHelperRequest(this);
 
 
     @Override

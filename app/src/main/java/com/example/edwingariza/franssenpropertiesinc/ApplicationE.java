@@ -75,6 +75,7 @@ public class ApplicationE extends AppCompatActivity {
         helper.insertApplicantE(r);
         Intent in = new Intent(ApplicationE.this, ContinueFinal.class);
         startActivity(in);
+        Toast.makeText(ApplicationE.this, "The last Page ", Toast.LENGTH_SHORT).show();
 
 
     }

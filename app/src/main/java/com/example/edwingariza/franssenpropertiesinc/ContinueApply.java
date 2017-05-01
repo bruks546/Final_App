@@ -35,12 +35,55 @@ public class ContinueApply extends AppCompatActivity {
 
             String underName = editUnderName.getText().toString();
             String when = editWhen.getText().toString();
-             String land=  editCurrentLand.getText().toString();
-              String landphone= editCurrentPhone.getText().toString();
-              String prename = editPreLanName.getText().toString();
-              String prephone   =   editPreLandPhone.getText().toString();
+            String land=  editCurrentLand.getText().toString();
+            String landphone= editCurrentPhone.getText().toString();
+            String prename = editPreLanName.getText().toString();
+            String prephone = editPreLandPhone.getText().toString();
 
-            ApplicationBGetSet c = new ApplicationBGetSet();
+
+        if(!(land.equals(""))) {
+
+            if (!(landphone.equals(""))) {
+
+
+                if (!(prename.equals(""))) {
+
+
+                    if (!(prephone.equals(""))) {
+
+
+                        ApplicationBGetSet c = new ApplicationBGetSet();
+                        c.setUnder_name(underName);
+                        c.setWhen_have(when);
+                        c.setLandlord_name(land);
+                        c.setLandlord_phone(landphone);
+                        c.setPre_landlord_name(prename);
+                        c.setPre_landlord_phone(prephone);
+
+
+                        helper.insertContact(c);
+                        Intent in = new Intent(ContinueApply.this, Continue_C.class);
+                        startActivity(in);
+                    } else {
+                        Toast.makeText(ContinueApply.this, "Please enter phone of your previews Landloard", Toast.LENGTH_LONG).show();
+                    }
+
+                } else {
+                    Toast.makeText(ContinueApply.this, "Please enter name of your previews Landloard", Toast.LENGTH_LONG).show();
+                }
+            } else {
+                Toast.makeText(ContinueApply.this, "Please enter phone of your current Landloard", Toast.LENGTH_LONG).show();
+            }
+        }
+        else{
+            Toast.makeText(ContinueApply.this, "Please enter name of your current Landloard", Toast.LENGTH_LONG).show();
+        }
+
+
+
+
+/**
+        ApplicationBGetSet c = new ApplicationBGetSet();
             c.setUnder_name(underName);
             c.setWhen_have(when);
             c.setLandlord_name(land);
@@ -52,7 +95,7 @@ public class ContinueApply extends AppCompatActivity {
             helper.insertContact(c);
             Intent in = new Intent(ContinueApply.this, Continue_C.class);
             startActivity(in);
-
+*/
 
     }
 }
