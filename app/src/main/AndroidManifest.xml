@@ -35,7 +35,6 @@
         <activity android:name=".Emergency" />
         <activity android:name=".LogIn" />
         <activity android:name=".ServiceRequest" />
-        <activity android:name=".Tips" />
         <activity android:name=".ContactUs" />
         <activity android:name=".Application" />
         <activity android:name=".ContinueApply" />
